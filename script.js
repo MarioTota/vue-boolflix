@@ -2,7 +2,9 @@ var app = new Vue({
   el: '#root',
   data: {
     films: [],
-    images: []
+    images: [],
+    prefix: 'https://image.tmdb.org/t/p/w220_and_h330_face'
+
 	},
   methods: {
 

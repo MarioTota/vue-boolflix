@@ -20,7 +20,7 @@
       </div>
     </header>
     <main>
-      <div class="card" v-for="film in films">
+      <div class="card" v-for="film in films"  :style="{backgroundImage:'url(\'https://image.tmdb.org/t/p/w220_and_h330_face\' + film.poster_path)'}">
         <div class="layover">
           <div class="testo_layover">
             <strong>Titolo</strong>: {{ film.title }}<br>

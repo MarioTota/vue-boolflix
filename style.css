@@ -39,15 +39,15 @@ main {
 main .card {
   width: 220px;
   height: 330px;
-  background-image: url('https://image.tmdb.org/t/p/w220_and_h330_face/kxyn3Prq03I3FIIDobMh3qvbzMS.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   margin: 10px 0;
   overflow-y: auto;
+  border-radius: 10px;
 }
 main .card .layover {
-  width: 100%;
+  min-width: 100%;
   min-height: 100%;;
   background-color: rgba(0, 0, 0, 0.0);
 }
