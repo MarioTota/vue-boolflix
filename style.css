@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+}
+
+header {
+  height: 10vh;
+  width: 100%;
+  background-color: black;
+}
+header span {
+  color: red;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 10vh;
+  vertical-align: middle;
+  padding: 0 20px;
+}
+header .form {
+  float: right;
+  line-height: 10vh;
+  vertical-align: middle;
+  padding: 0 20px;
+}
+
+main {
+  width: 100%;
+  background-color: #211E1E;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main .card {
+  width: 200px;
+  height: 300px;
+  background-image: url('https://www.fr4med.it/wp-content/uploads/2018/09/HauntingOfHillHouse_Vertical-Main_PRE_IT.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 10px 0;
+}
+main .card .layover {
+  width: 100%;
+  height: 100%;;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+main .card .layover .testo_layover {
+  font-size: 15px;
+  color: white;
+  padding: 20px 10px;
+  visibility: hidden;
+}
+main .card:hover .layover {
+  background: rgba(0, 0, 0, 0.8);
+}
+main .card:hover .testo_layover {
+  visibility: visible;
+}
+main .card .testo_layover .fas.fa-star {
+  color: #FDBE01;
+}
