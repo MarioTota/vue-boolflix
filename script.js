@@ -2,7 +2,7 @@ var app = new Vue({
   el: '#root',
   data: {
     films: [],
-    linkImages: []
+    images: []
 	},
   methods: {
 
