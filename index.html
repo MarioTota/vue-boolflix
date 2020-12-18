@@ -23,12 +23,12 @@
       <div class="card" v-for="film in films">
         <div class="layover">
           <div class="testo_layover">
-            <strong>Titolo</strong>: <!--Ritorno al futuro-->{{ film.title }}<br>
+            <strong>Titolo</strong>: {{ film.title }}<br>
             <strong>Titolo originale</strong>: {{ film.original_title }}<br>
             <strong>Voto</strong>:
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum veritatis vitae tempora nulla unde laudantium, voluptatibus maxime architecto, quas animi, blanditiis adipisci aperiam similique eveniet nesciunt a error quidem iusto.
+            <strong>Overview</strong>: {{ film.overview }}
           </div>
         </div>
       </div>
