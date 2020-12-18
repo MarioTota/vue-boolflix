@@ -37,8 +37,8 @@ main {
   justify-content: space-around;
 }
 main .card {
-  width: 200px;
-  height: 300px;
+  width: 220px;
+  height: 330px;
   background-image: url('https://www.fr4med.it/wp-content/uploads/2018/09/HauntingOfHillHouse_Vertical-Main_PRE_IT.jpg');
   background-size: contain;
   background-repeat: no-repeat;
@@ -53,7 +53,7 @@ main .card .layover {
 main .card .layover .testo_layover {
   font-size: 15px;
   color: white;
-  padding: 20px 10px;
+  padding: 20px 15px;
   visibility: hidden;
 }
 main .card:hover .layover {

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.js" integrity="sha512-bYkaBWaFtfPIMYt9+CX/4DWgfrjcHinjerNYxQmQx1VM76eUsPPKZa5zWV8KksVkBF/DaHSADCwil2J5Uq2ctA==" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
   <title>Boolflix</title>
 </head>
@@ -18,215 +20,11 @@
       </div>
     </header>
     <main>
-      <div class="card">
+      <div class="card" v-for="film in films">
         <div class="layover">
           <div class="testo_layover">
-            <strong>Titolo</strong>: Ritorno al futuro<br>
-            <strong>Titolo originale</strong>: Back to the Future<br>
-            <strong>Voto</strong>:
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum veritatis vitae tempora nulla unde laudantium, voluptatibus maxime architecto, quas animi, blanditiis adipisci aperiam similique eveniet nesciunt a error quidem iusto.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="layover">
-          <div class="testo_layover">
-            <strong>Titolo</strong>: Ritorno al futuro<br>
-            <strong>Titolo originale</strong>: Back to the Future<br>
-            <strong>Voto</strong>:
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum veritatis vitae tempora nulla unde laudantium, voluptatibus maxime architecto, quas animi, blanditiis adipisci aperiam similique eveniet nesciunt a error quidem iusto.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="layover">
-          <div class="testo_layover">
-            <strong>Titolo</strong>: Ritorno al futuro<br>
-            <strong>Titolo originale</strong>: Back to the Future<br>
-            <strong>Voto</strong>:
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum veritatis vitae tempora nulla unde laudantium, voluptatibus maxime architecto, quas animi, blanditiis adipisci aperiam similique eveniet nesciunt a error quidem iusto.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="layover">
-          <div class="testo_layover">
-            <strong>Titolo</strong>: Ritorno al futuro<br>
-            <strong>Titolo originale</strong>: Back to the Future<br>
-            <strong>Voto</strong>:
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum veritatis vitae tempora nulla unde laudantium, voluptatibus maxime architecto, quas animi, blanditiis adipisci aperiam similique eveniet nesciunt a error quidem iusto.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="layover">
-          <div class="testo_layover">
-            <strong>Titolo</strong>: Ritorno al futuro<br>
-            <strong>Titolo originale</strong>: Back to the Future<br>
-            <strong>Voto</strong>:
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum veritatis vitae tempora nulla unde laudantium, voluptatibus maxime architecto, quas animi, blanditiis adipisci aperiam similique eveniet nesciunt a error quidem iusto.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="layover">
-          <div class="testo_layover">
-            <strong>Titolo</strong>: Ritorno al futuro<br>
-            <strong>Titolo originale</strong>: Back to the Future<br>
-            <strong>Voto</strong>:
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum veritatis vitae tempora nulla unde laudantium, voluptatibus maxime architecto, quas animi, blanditiis adipisci aperiam similique eveniet nesciunt a error quidem iusto.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="layover">
-          <div class="testo_layover">
-            <strong>Titolo</strong>: Ritorno al futuro<br>
-            <strong>Titolo originale</strong>: Back to the Future<br>
-            <strong>Voto</strong>:
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum veritatis vitae tempora nulla unde laudantium, voluptatibus maxime architecto, quas animi, blanditiis adipisci aperiam similique eveniet nesciunt a error quidem iusto.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="layover">
-          <div class="testo_layover">
-            <strong>Titolo</strong>: Ritorno al futuro<br>
-            <strong>Titolo originale</strong>: Back to the Future<br>
-            <strong>Voto</strong>:
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum veritatis vitae tempora nulla unde laudantium, voluptatibus maxime architecto, quas animi, blanditiis adipisci aperiam similique eveniet nesciunt a error quidem iusto.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="layover">
-          <div class="testo_layover">
-            <strong>Titolo</strong>: Ritorno al futuro<br>
-            <strong>Titolo originale</strong>: Back to the Future<br>
-            <strong>Voto</strong>:
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum veritatis vitae tempora nulla unde laudantium, voluptatibus maxime architecto, quas animi, blanditiis adipisci aperiam similique eveniet nesciunt a error quidem iusto.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="layover">
-          <div class="testo_layover">
-            <strong>Titolo</strong>: Ritorno al futuro<br>
-            <strong>Titolo originale</strong>: Back to the Future<br>
-            <strong>Voto</strong>:
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum veritatis vitae tempora nulla unde laudantium, voluptatibus maxime architecto, quas animi, blanditiis adipisci aperiam similique eveniet nesciunt a error quidem iusto.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="layover">
-          <div class="testo_layover">
-            <strong>Titolo</strong>: Ritorno al futuro<br>
-            <strong>Titolo originale</strong>: Back to the Future<br>
-            <strong>Voto</strong>:
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum veritatis vitae tempora nulla unde laudantium, voluptatibus maxime architecto, quas animi, blanditiis adipisci aperiam similique eveniet nesciunt a error quidem iusto.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="layover">
-          <div class="testo_layover">
-            <strong>Titolo</strong>: Ritorno al futuro<br>
-            <strong>Titolo originale</strong>: Back to the Future<br>
-            <strong>Voto</strong>:
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum veritatis vitae tempora nulla unde laudantium, voluptatibus maxime architecto, quas animi, blanditiis adipisci aperiam similique eveniet nesciunt a error quidem iusto.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="layover">
-          <div class="testo_layover">
-            <strong>Titolo</strong>: Ritorno al futuro<br>
-            <strong>Titolo originale</strong>: Back to the Future<br>
-            <strong>Voto</strong>:
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum veritatis vitae tempora nulla unde laudantium, voluptatibus maxime architecto, quas animi, blanditiis adipisci aperiam similique eveniet nesciunt a error quidem iusto.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="layover">
-          <div class="testo_layover">
-            <strong>Titolo</strong>: Ritorno al futuro<br>
-            <strong>Titolo originale</strong>: Back to the Future<br>
-            <strong>Voto</strong>:
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum veritatis vitae tempora nulla unde laudantium, voluptatibus maxime architecto, quas animi, blanditiis adipisci aperiam similique eveniet nesciunt a error quidem iusto.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="layover">
-          <div class="testo_layover">
-            <strong>Titolo</strong>: Ritorno al futuro<br>
-            <strong>Titolo originale</strong>: Back to the Future<br>
-            <strong>Voto</strong>:
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum veritatis vitae tempora nulla unde laudantium, voluptatibus maxime architecto, quas animi, blanditiis adipisci aperiam similique eveniet nesciunt a error quidem iusto.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="layover">
-          <div class="testo_layover">
-            <strong>Titolo</strong>: Ritorno al futuro<br>
-            <strong>Titolo originale</strong>: Back to the Future<br>
-            <strong>Voto</strong>:
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum veritatis vitae tempora nulla unde laudantium, voluptatibus maxime architecto, quas animi, blanditiis adipisci aperiam similique eveniet nesciunt a error quidem iusto.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="layover">
-          <div class="testo_layover">
-            <strong>Titolo</strong>: Ritorno al futuro<br>
-            <strong>Titolo originale</strong>: Back to the Future<br>
-            <strong>Voto</strong>:
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum veritatis vitae tempora nulla unde laudantium, voluptatibus maxime architecto, quas animi, blanditiis adipisci aperiam similique eveniet nesciunt a error quidem iusto.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="layover">
-          <div class="testo_layover">
-            <strong>Titolo</strong>: Ritorno al futuro<br>
-            <strong>Titolo originale</strong>: Back to the Future<br>
+            <strong>Titolo</strong>: <!--Ritorno al futuro-->{{ film.title }}<br>
+            <strong>Titolo originale</strong>: {{ film.original_title }}<br>
             <strong>Voto</strong>:
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               <i class="fas fa-star"></i><br>
@@ -236,5 +34,6 @@
       </div>
     </main>
   </div>
+  <script src="script.js" charset="utf-8"></script>
 </body>
 </html>
