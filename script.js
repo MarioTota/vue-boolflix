@@ -7,7 +7,6 @@ var app = new Vue({
   	},
     methods: {
       pippo: function () {
-          console.log("ciao");
           axios
             .get('https://api.themoviedb.org/3/search/movie?api_key=45461509edc8d818f3b7e4e72e2b03e5&language=it-IT&query='+ this.message +'&page=1&include_adult=false')
             .then((result) =>  {
@@ -17,6 +16,7 @@ var app = new Vue({
                 }
               )
             });
+            
         }
     },
 
