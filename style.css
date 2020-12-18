@@ -30,6 +30,7 @@ header .form {
 
 main {
   width: 100%;
+  min-height: 90vh;
   background-color: #211E1E;
   padding: 60px;
   display: flex;

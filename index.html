@@ -15,12 +15,12 @@
     <header>
       <span>BOOLFLIX</span>
       <div class="form">
-        <input type="text" name="" value="">
-        <button type="button" name="button">Cerca</button>
+        <input type="text" v-model='message'>
+        <button type="button" name="button" @click='pippo'>Cerca</button>
       </div>
     </header>
     <main>
-      <div class="card" v-for="film in films"  :style="{backgroundImage:'url(\'https://image.tmdb.org/t/p/w220_and_h330_face\' + film.poster_path)'}">
+      <div class="card" v-for="film in films" :style="{backgroundImage:'url('+ prefix + film.poster_path +')'}">
         <div class="layover">
           <div class="testo_layover">
             <strong>Titolo</strong>: {{ film.title }}<br>
