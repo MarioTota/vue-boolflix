@@ -9,30 +9,44 @@
 }
 
 header {
-  height: 10vh;
   width: 100%;
+  padding: 10px 0;
   background-color: black;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 header span {
   color: red;
   font-size: 40px;
   font-weight: bold;
-  line-height: 10vh;
-  vertical-align: middle;
-  padding: 0 20px;
+  margin-left: 20px;
 }
 header .form {
   float: right;
-  line-height: 10vh;
-  vertical-align: middle;
-  padding: 0 20px;
+  margin-right: 20px;
+  border: 1px solid white;
+}
+header input {
+  padding: 6px 10px;
+  background-color: black;
+  color: grey;
+  border: none;
+}
+header button {
+  padding: 6px 10px;
+  background-color: black;
+  color: white;
+  border: none;
 }
 
 main {
   width: 100%;
-  min-height: 90vh;
   background-color: #211E1E;
-  padding: 60px;
+  padding-top: 10vh;
+  padding-left: 60px;
+  padding-right: 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -46,6 +60,9 @@ main .card {
   margin: 10px 0;
   overflow-y: auto;
   border-radius: 10px;
+}
+main .card::-webkit-scrollbar {
+  display: none;
 }
 main .card .layover {
   min-width: 100%;

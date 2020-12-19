@@ -15,20 +15,24 @@
     <header>
       <span>BOOLFLIX</span>
       <div class="form">
-        <input type="text" v-model='message'>
-        <button type="button" name="button" @click='pippo'>Cerca</button>
+        <input type="text" v-model='message' placeholder="Titoli, persone, generi">
+        <button type="button" name="button" @click='pippo'><i class="fas fa-search"></i></button>
       </div>
     </header>
     <main>
       <div class="card" v-for="film in films" :style="{backgroundImage:'url('+ prefix + film.poster_path +')'}">
         <div class="layover">
           <div class="testo_layover">
-            <strong>Titolo</strong>: {{ film.title }}<br>
-            <strong>Titolo originale</strong>: {{ film.original_title }}<br>
-            <strong>Voto</strong>:
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <i class="fas fa-star"></i><br>
-            <strong>Overview</strong>: {{ film.overview }}
+            <div><strong>Titolo</strong>: {{ film.title }}</div>
+            <div><strong>Titolo originale</strong>: {{ film.original_title }}</div>
+            <div><strong>Voto</strong>:
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div><strong>Overview</strong>: {{ film.overview }}</div>
           </div>
         </div>
       </div>

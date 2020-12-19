@@ -16,24 +16,23 @@ var app = new Vue({
                 }
               )
             });
-            
         }
     },
 
-    // mounted:
-    //   function () {
-    //     console.log("ciao");
-    //     axios
-    //       .get('https://api.themoviedb.org/3/trending/all/day?api_key=45461509edc8d818f3b7e4e72e2b03e5')
-    //       .then((result) =>  {
-    //         result.data.results.forEach(
-    //           (element) => {
-    //             this.trending.push(element);
-    //           }
-    //         )
-    //         console.log(this.trending);
-    //       });
-    //   }
+    mounted:
+      function () {
+        console.log("ciao");
+        axios
+          .get('https://api.themoviedb.org/3/trending/all/day?api_key=45461509edc8d818f3b7e4e72e2b03e5')
+          .then((result) =>  {
+            result.data.results.forEach(
+              (element) => {
+                this.films.push(element);
+              }
+            )
+            console.log(this.films);
+          });
+      }
 
 
 });
