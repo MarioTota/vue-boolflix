@@ -7,8 +7,9 @@ var app = new Vue({
   	},
     methods: {
       pippo: function () {
+        this.films = [];
           axios
-            .get('https://api.themoviedb.org/3/search/movie?api_key=45461509edc8d818f3b7e4e72e2b03e5&language=it-IT&query='+ this.message +'&page=1&include_adult=false')
+            .get('https://api.themoviedb.org/3/search/movie?api_key=45461509edc8d818f3b7e4e72e2b03e5&language=en-EN&query='+ this.message +'&page=1&include_adult=false')
             .then((result) =>  {
               result.data.results.forEach(
                 (element) => {
@@ -21,7 +22,6 @@ var app = new Vue({
 
     mounted:
       function () {
-        console.log("ciao");
         axios
           .get('https://api.themoviedb.org/3/trending/all/day?api_key=45461509edc8d818f3b7e4e72e2b03e5')
           .then((result) =>  {
@@ -30,9 +30,6 @@ var app = new Vue({
                 this.films.push(element);
               }
             )
-            console.log(this.films);
           });
       }
-
-
 });
