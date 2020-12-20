@@ -46,11 +46,11 @@ main {
   width: 100%;
   background-color: #211E1E;
   padding-top: 10vh;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 61px;
+  padding-right: 61px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 main .card {
   width: 220px;
@@ -58,9 +58,10 @@ main .card {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 10px 0;
+  margin: 20px 0;
   overflow-y: auto;
   border-radius: 10px;
+  cursor: pointer;
 }
 main .card::-webkit-scrollbar {
   display: none;
@@ -76,9 +77,8 @@ main .card .layover .testo_layover {
   padding: 20px 15px;
   visibility: hidden;
 }
-main .card:hover {
-  width: 250px;
-  height: 360px;
+main .card .layover .testo_layover div {
+  padding: 2px 0;
 }
 main .card:hover .layover {
   background: rgba(0, 0, 0, 0.8);
