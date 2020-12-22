@@ -44,6 +44,7 @@ header button {
 
 main {
   width: 100%;
+  min-height: 100vh;
   background-color: #211E1E;
   padding-top: 10vh;
   padding-left: 61px;
@@ -62,6 +63,13 @@ main .card {
   overflow-y: auto;
   border-radius: 10px;
   cursor: pointer;
+}
+.wrapper {
+  width: 100%;
+  background-image: url('https://image.tmdb.org/t/p/w342/wwemzKWzjKYJFfCeiB57q3r4Bcm.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
 }
 main .card::-webkit-scrollbar {
   display: none;
@@ -88,4 +96,10 @@ main .card:hover .testo_layover {
 }
 main .card .testo_layover .fas.fa-star {
   color: #FDBE01;
+}
+main .card .testo_layover .flag {
+  height: 50px;
+  border-radius: 50%;
+}
+.card:hover .layover {
 }
