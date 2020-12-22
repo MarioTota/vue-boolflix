@@ -17,6 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 3;
 }
 header span {
   color: red;
@@ -64,13 +65,6 @@ main .card {
   border-radius: 10px;
   cursor: pointer;
 }
-.wrapper {
-  width: 100%;
-  background-image: url('https://image.tmdb.org/t/p/w342/wwemzKWzjKYJFfCeiB57q3r4Bcm.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: repeat;
-}
 main .card::-webkit-scrollbar {
   display: none;
 }
@@ -78,6 +72,12 @@ main .card .layover {
   min-width: 100%;
   min-height: 100%;;
   background-color: rgba(0, 0, 0, 0.0);
+}
+.placeholder {
+  background-image: url('https://image.tmdb.org/t/p/w342/wwemzKWzjKYJFfCeiB57q3r4Bcm.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
 }
 main .card .layover .testo_layover {
   font-size: 15px;
@@ -88,8 +88,11 @@ main .card .layover .testo_layover {
 main .card .layover .testo_layover div {
   padding: 2px 0;
 }
+main .card:hover {
+  background-image: url('https://images.pexels.com/videos/3045163/free-video-3045163.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+}
 main .card:hover .layover {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 5);
 }
 main .card:hover .testo_layover {
   visibility: visible;
@@ -100,6 +103,4 @@ main .card .testo_layover .fas.fa-star {
 main .card .testo_layover .flag {
   height: 50px;
   border-radius: 50%;
-}
-.card:hover .layover {
 }

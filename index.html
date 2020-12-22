@@ -23,30 +23,28 @@
     </header>
     <main>
       <div class="card" v-for="film in films" :style="{backgroundImage:'url('+ prefix + film.poster_path +')'}">
-        <div class="wrapper" v-if='film.poster_path == null'>
-          <div class="layover">
-            <div class="testo_layover">
-              <div class="flags">
-                <img class="flag" src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-round-250.png" alt="flag_usa" v-if="film.original_language == 'en'">
-                <img class="flag" src="https://cdn1.iconfinder.com/data/icons/international-circular-flags/512/germany_german_national_country_flag-512.png" alt="flag_usa" v-if="film.original_language == 'de'">
-                <img class="flag" src="https://www.pngfind.com/pngs/m/557-5572502_icon-french-language-france-flag-logo-png-transparent.png" alt="flag_usa" v-if="film.original_language == 'fr'">
-              </div>
-              <div>
-                <strong>Title</strong>
-                : {{ film.title }}{{ film.name }}
-              </div>
-              <div>
-                <strong>Original Title</strong>
-                : {{ film.original_title }}{{ film.original_name }}
-              </div>
-              <div>
-                <strong>Vote</strong>
-                : <i class="fas fa-star"></i>
-              </div>
-              <div>
-                <strong>Overview</strong>
-                : {{ film.overview }}{{ film.overview }}
-              </div>
+        <div class="layover" :class="{ placeholder: film.poster_path == null }">
+          <div class="testo_layover">
+            <div class="flags">
+              <img class="flag" src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-round-250.png" alt="flag_usa" v-if="film.original_language == 'en'">
+              <img class="flag" src="https://cdn1.iconfinder.com/data/icons/international-circular-flags/512/germany_german_national_country_flag-512.png" alt="flag_usa" v-if="film.original_language == 'de'">
+              <img class="flag" src="https://www.pngfind.com/pngs/m/557-5572502_icon-french-language-france-flag-logo-png-transparent.png" alt="flag_usa" v-if="film.original_language == 'fr'">
+            </div>
+            <div>
+              <strong>Title</strong>
+              : {{ film.title }}{{ film.name }}
+            </div>
+            <div>
+              <strong>Original Title</strong>
+              : {{ film.original_title }}{{ film.original_name }}
+            </div>
+            <div>
+              <strong>Vote</strong>
+              : <i class="fas fa-star"></i>
+            </div>
+            <div>
+              <strong>Overview</strong>
+              : {{ film.overview }}
             </div>
           </div>
         </div>
