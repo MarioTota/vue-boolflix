@@ -19,6 +19,7 @@ var app = new Vue({
                   this.films.push(element);
                   var voto = Math.ceil(element.vote_average / 2);
                   this.votes.push(voto);
+                  console.log(this.votes);
                 }
               )
             });
