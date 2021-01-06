@@ -5,10 +5,13 @@ var app = new Vue({
       series: [],
       prefix: 'https://image.tmdb.org/t/p/w220_and_h330_face',
       message: '',
-      votes: []
+      votes: [],
+      voto: '',
+      boolean: false
   	},
     methods: {
       funzioneCerca: function () {
+        this.boolean = true
         this.films = [];
         this.series = [];
           axios
@@ -33,20 +36,24 @@ var app = new Vue({
                 )
               });
         this.message = '';
-        }
+      },
+      funzioneRicarica: function () {
+        window.location.reload();
+        window.scrollTo(0, 0);
+      }
     },
 
     mounted:
       function () {
-        // axios
-        //   .get('https://api.themoviedb.org/3/trending/all/day?api_key=45461509edc8d818f3b7e4e72e2b03e5')
-        //   .then((result) =>  {
-        //     result.data.results.forEach(
-        //       (element) => {
-        //         this.films.push(element);
-        //       }
-        //     )
-        //   });
+        axios
+          .get('https://api.themoviedb.org/3/trending/all/day?api_key=45461509edc8d818f3b7e4e72e2b03e5')
+          .then((result) =>  {
+            result.data.results.forEach(
+              (element) => {
+                this.films.push(element);
+              }
+            )
+          });
 
       }
 });

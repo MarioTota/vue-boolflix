@@ -24,6 +24,7 @@ header span {
   font-size: 40px;
   font-weight: bold;
   margin-left: 20px;
+  cursor: pointer;
 }
 header .form {
   float: right;
@@ -43,13 +44,22 @@ header button {
   border: none;
 }
 
-main {
+.wrapper {
   width: 100%;
   min-height: 100vh;
   background-color: #211E1E;
-  padding-top: 10vh;
   display: flex;
   flex-wrap: wrap;
+}
+.padding {
+  padding-top: 10vh;
+}
+main .tendenze {
+  padding-top: 90px;
+  padding-left: 20px;
+  font-size: 30px;
+  background-color: #211E1E;
+  color: white;
 }
 main .card {
   width: 220px;

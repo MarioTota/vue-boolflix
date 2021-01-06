@@ -15,20 +15,24 @@
 <body>
   <div id="root">
     <header>
-      <span>BOOLFLIX</span>
+      <span @click='funzioneRicarica'>BOOLFLIX</span>
       <div class="form">
         <input type="text" v-model='message' placeholder="Titles, people, genres" v-on:keyup.enter="funzioneCerca">
         <button type="button" name="button" @click='funzioneCerca'><i class="fas fa-search"></i></button>
       </div>
     </header>
     <main>
-      <div class="card" v-for="film in films" :style="{backgroundImage:'url('+ prefix + film.poster_path +')'}">
+      <div class="tendenze" v-if="boolean == false">In Tendenza</div>
+      <div class="wrapper" :class="{ padding: boolean }">
+        <div class="card" v-for="film in films" :style="{backgroundImage:'url('+ prefix + film.poster_path +')'}">
         <div class="layover" :class="{ placeholder: film.poster_path == null }">
           <div class="testo_layover">
             <div class="flags">
               <img class="flag" src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-round-250.png" alt="flag_usa" v-if="film.original_language == 'en'">
               <img class="flag" src="https://cdn1.iconfinder.com/data/icons/international-circular-flags/512/germany_german_national_country_flag-512.png" alt="flag_usa" v-if="film.original_language == 'de'">
               <img class="flag" src="https://www.pngfind.com/pngs/m/557-5572502_icon-french-language-france-flag-logo-png-transparent.png" alt="flag_usa" v-if="film.original_language == 'fr'">
+              <img class="flag" src="https://i.pinimg.com/originals/c5/f0/fa/c5f0fa5ac14327b8330fde1c621ffa8a.jpg" alt="flag"
+              v-if="film.original_language != 'en' && film.original_language != 'de' && film.original_language != 'fr'">
             </div>
             <div>
               <strong>Title</strong>
@@ -40,7 +44,7 @@
             </div>
             <div>
               <strong>Vote</strong>
-              : <i class="fas fa-star"></i>
+              : <i class="fas fa-star" v-if="voto == 0"></i>
             </div>
             <div>
               <strong>Overview</strong>
@@ -48,6 +52,7 @@
             </div>
           </div>
         </div>
+      </div>
       </div>
     </main>
   </div>
