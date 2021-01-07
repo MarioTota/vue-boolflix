@@ -7,33 +7,33 @@ var app = new Vue({
       message: '',
       votes: [],
       vote: '',
-      trending: false,
+      trending: false
   	},
     methods: {
       functionFind: function () {
-        this.trending = true
+        this.trending = true;
         this.films = [];
         this.series = [];
-          axios
-            .get('https://api.themoviedb.org/3/search/movie?api_key=45461509edc8d818f3b7e4e72e2b03e5&language=en-EN&query='+ this.message +'&page=1&include_adult=false')
-            .then((result) =>  {
-              result.data.results.forEach(
-                (element) => {
-                  this.films.push(element);
-                  var vote = Math.ceil(element.vote_average / 2);
-                  this.votes.push(vote);
-                }
-              )
-            });
-            axios
-              .get('https://api.themoviedb.org/3/search/tv?api_key=e99307154c6dfb0b4750f6603256716d&language=en_EN&query='+ this.message +'')
-              .then((result) =>  {
-                result.data.results.forEach(
-                  (element) => {
-                    this.films.push(element);
-                  }
-                )
-              });
+        axios
+          .get('https://api.themoviedb.org/3/search/movie?api_key=45461509edc8d818f3b7e4e72e2b03e5&language=en-EN&query='+ this.message +'&page=1&include_adult=false')
+          .then((result) =>  {
+            result.data.results.forEach(
+              (element) => {
+                this.films.push(element);
+                var vote = Math.ceil(element.vote_average / 2);
+                this.votes.push(vote);
+              }
+            )
+          });
+        axios
+          .get('https://api.themoviedb.org/3/search/tv?api_key=e99307154c6dfb0b4750f6603256716d&language=en_EN&query='+ this.message +'')
+          .then((result) =>  {
+            result.data.results.forEach(
+              (element) => {
+                this.films.push(element);
+              }
+            );
+          });
         console.log(this.votes);
         this.message = '';
         window.scrollTo(0, 0);
