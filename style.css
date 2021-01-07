@@ -8,7 +8,7 @@
 #root {
   width: 100%;
 }
-
+/* header */
 header {
   width: 100%;
   padding: 10px 0;
@@ -43,20 +43,20 @@ header button {
   color: white;
   border: none;
 }
+/* /header */
 
-.wrapper {
+/* main */
+main .wrapper {
   width: 100%;
   min-height: 100vh;
   background-color: #211E1E;
   display: flex;
   flex-wrap: wrap;
+  padding-top: 3vh;
 }
-.padding {
-  padding-top: 10vh;
-}
-main .tendenze {
+main .trending_results {
   padding-top: 90px;
-  padding-left: 20px;
+  padding-left: 32px;
   font-size: 30px;
   background-color: #211E1E;
   color: white;
@@ -86,13 +86,13 @@ main .card .layover {
   background-position: center;
   background-repeat: repeat;
 }
-main .card .layover .testo_layover {
+main .card .layover .layover_text {
   font-size: 15px;
   color: white;
   padding: 20px 15px;
   visibility: hidden;
 }
-main .card .layover .testo_layover div {
+main .card .layover .layover_text div {
   padding: 2px 0;
 }
 main .card:hover {
@@ -101,13 +101,14 @@ main .card:hover {
 main .card:hover .layover {
   background: rgba(0, 0, 0, 5);
 }
-main .card:hover .testo_layover {
+main .card:hover .layover_text {
   visibility: visible;
 }
-main .card .testo_layover .fas.fa-star {
+main .card .layover_text .fas.fa-star {
   color: #FDBE01;
 }
-main .card .testo_layover .flag {
+main .card .layover_text .flag {
   height: 50px;
   border-radius: 50%;
 }
+/* /main */

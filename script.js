@@ -6,12 +6,12 @@ var app = new Vue({
       prefix: 'https://image.tmdb.org/t/p/w220_and_h330_face',
       message: '',
       votes: [],
-      voto: '',
-      boolean: false
+      vote: '',
+      trending: false,
   	},
     methods: {
-      funzioneCerca: function () {
-        this.boolean = true
+      functionFind: function () {
+        this.trending = true
         this.films = [];
         this.series = [];
           axios
@@ -20,9 +20,8 @@ var app = new Vue({
               result.data.results.forEach(
                 (element) => {
                   this.films.push(element);
-                  var voto = Math.ceil(element.vote_average / 2);
-                  this.votes.push(voto);
-                  console.log(this.votes);
+                  var vote = Math.ceil(element.vote_average / 2);
+                  this.votes.push(vote);
                 }
               )
             });
@@ -35,9 +34,11 @@ var app = new Vue({
                   }
                 )
               });
+        console.log(this.votes);
         this.message = '';
+        window.scrollTo(0, 0);
       },
-      funzioneRicarica: function () {
+      functionReload: function () {
         window.location.reload();
         window.scrollTo(0, 0);
       }
@@ -54,6 +55,5 @@ var app = new Vue({
               }
             )
           });
-
       }
 });
